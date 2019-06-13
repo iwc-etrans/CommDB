@@ -3,8 +3,7 @@
 # @Time    : 2019/6/12 15:39
 # @Author  : Fcvane
 # @Param   : 加密&解密
-# @File    : PasswdCommon.py
-
+# @File    : PasswdUtil.py
 
 import base64
 import sys,os
@@ -33,7 +32,6 @@ def decrypt(encryptPassword):
     cipher = AES.new(key, AES.MODE_CBC, iv)
     originalPassword = unpad(cipher.decrypt(base64Decoded[:-32]))[bs:]
     return originalPassword
-
 
 if __name__ == '__main__':
     if len(sys.argv) == 3:
