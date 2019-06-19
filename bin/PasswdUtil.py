@@ -9,17 +9,20 @@ import base64
 import sys,os
 from Crypto import Random
 from Crypto.Cipher import AES
+import LogUtil
+
+name = os.path.basename(__file__)
 
 # 加密函数
 def encrypt(originalPassword):
     bs = AES.block_size
     pad = lambda s: s + (bs - len(s) % bs) * chr(bs - len(s) % bs)
-
     paddPassword = pad(originalPassword)
     iv = Random.OSRNG.new().read(bs)
     key = os.urandom(32)
     cipher = AES.new(key, AES.MODE_CBC, iv)
     encryptPassword = base64.b64encode(iv + cipher.encrypt(paddPassword) + key)
+    LogUtil.log(name, 'Password encryption success', 'info')
     return encryptPassword
 
 # 解密函数
@@ -31,6 +34,7 @@ def decrypt(encryptPassword):
     key = base64Decoded[-32:]
     cipher = AES.new(key, AES.MODE_CBC, iv)
     originalPassword = unpad(cipher.decrypt(base64Decoded[:-32]))[bs:]
+    LogUtil.log(name, 'Password decryption success', 'info')
     return originalPassword
 
 if __name__ == '__main__':
