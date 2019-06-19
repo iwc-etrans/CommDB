@@ -47,11 +47,14 @@ def dbCFGInfo(program):
         for elem in elemlist:
             array = {}
             for child in elem.getchildren():
-                # print (child.tag, ":", child.attrib, ":", child.text)
-                array[child.tag] = child.text
+                #print (child.tag, ":", child.attrib, ":", child.text)
+                if child.tag == "passWord":
+                    array[child.tag] = PasswdUtil.decrypt(child.text)
+                else:
+                    array[child.tag] = child.text
             result[elem.attrib['type']] = array
             # print (array,"-----",result)
-        LogUtil.log(name, 'File {taskName} analysis success "'.format(taskName=taskName), 'info')
+        LogUtil.log(name, 'File {taskName} analysis sucessful "'.format(taskName=taskName), 'info')
     except Exception as e:  # 捕获除与程序退出sys.exit()相关之外的所有异常
         LogUtil.log(name, 'File {taskName} analysis failure '.format(taskName=taskName), 'error')
         sys.exit()

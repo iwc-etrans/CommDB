@@ -7,12 +7,10 @@
 
 
 import os, sys
-import datetime
-import logging
 import cx_Oracle
 import psycopg2
 import pymysql
-import VariableUtil
+import LogUtil
 from XmlUtil import dbCFGInfo
 
 try:
@@ -20,11 +18,11 @@ try:
 except ImportError:
     import xml.etree.ElementTree as etree
 
+name = os.path.basename(__file__)
 
 # 获取数据库连接
 def getConnect(program):
     config = dbCFGInfo(program)
-    print (config , "-----------------")
     for cronName in config.keys():
         dbType = cronName
         cronConfig = config[cronName]
@@ -39,31 +37,31 @@ def getConnect(program):
             try:
                 if dbType == 'oracle':
                     if sid is None or sid == '':
-                        # logger.error ('sid not exists , the %s config is error !!.'%program)
+                        LogUtil.log(name, 'Sid not exists , the %s config is error'.format(program=program), 'error')
                         sys.exit()
                     else:
-                        # logger.info('exec connect oracle start ...')
+                        LogUtil.log(name, 'Exec connect oracle start ...', 'info')
+                        print (" cx_Oracle.connect({userName}, {passWord},'{host}:{port}/{sid}')".format(userName=userName,passWord=passWord,host=host, port=port, sid=sid))
                         connect = cx_Oracle.connect(userName, passWord,
                                                     '{host}:{port}/{sid}'.format(host=host, port=port, sid=sid))
-                        # logger.info('connect oracle sucessful !.')
+                        LogUtil.log(name, 'Connect oracle sucessful !', 'info')
                 elif dbType == 'mysql':
                     if serverName is None or sid == '':
-                        # logger.error('serverName not exists , the %s config is error !!.' % program)
+                        LogUtil.log(name, 'ServerName not exists , the %s config is error !!'.format(program=program), 'error')
                         sys.exit()
                     else:
-                        # logger.info('exec connect mysql start ...')
+                        LogUtil.log(name, 'Exec connect mysql start ...','info')
                         connect = pymysql.connect(host=host, port=int(port), user=userName, passwd=passWord,
                                                   db=serverName, charset='utf8')
-                        # logger.info('connect mysql sucessful !.')
+                        LogUtil.log(name, 'Connect mysql sucessful !', 'info')
                 elif dbType == 'postgresql':
-                    # logger.info('exec connect postgresql start ...')
+                    LogUtil.log(name, 'Exec connect postgresql start ...', 'info')
                     connect = psycopg2.connect(database=serverName, user=userName, password=passWord, host=host,
                                                port=port)
-                    # logger.info('connect postgresql sucessful !.')
+                    LogUtil.log(name, 'Connect postgresql sucessful !', 'info')
             except:
-                print(1111111)
-                # logger.error('connect to db error !!.')
-                # logger.exception()
+                LogUtil.log(name, 'Connect to db failure ,please check config and try again !!', 'error')
+                connect = ""
             return connect
 
 

@@ -10,7 +10,7 @@ password - 密码
 <-->
 <configuration>
     <db type="oracle">
-        <host>10.45.15.20</host>
+        <host>10.45.15.201</host>
         <port>1521</port>
         <sid>orcl</sid>
         <serverName></serverName>
