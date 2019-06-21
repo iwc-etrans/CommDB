@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2019/6/13 8:52
 # @Author  : Fcvane
-# @Param   : 
+# @Param   : 全局变量
 # @File    : VariableUtil.py
 
 import os
