@@ -47,7 +47,7 @@ def dbCFGInfo(program):
         for elem in elemlist:
             array = {}
             for child in elem.getchildren():
-                #print (child.tag, ":", child.attrib, ":", child.text)
+                # print (child.tag, ":", child.attrib, ":", child.text)
                 if child.tag == "passWord":
                     array[child.tag] = PasswdUtil.decrypt(child.text)
                 else:

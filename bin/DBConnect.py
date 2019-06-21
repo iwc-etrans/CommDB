@@ -3,7 +3,7 @@
 # @Time    : 2019/6/12 16:24
 # @Author  : Fcvane
 # @Param   : 
-# @File    : DbConnect.py
+# @File    : DBConnect.py
 
 
 import os, sys
@@ -66,15 +66,12 @@ def getConnect(program):
 
 
 if __name__ == '__main__':
-    # conn = getConnect('fircus_dkh')
-    # cur = conn.cursor()
-    # cur.execute('select * from ttable_0409')
-    # result = cur.fetchall()
-    # print (result)
 
     conn = getConnect('commondb')
     cur = conn.cursor()
     cur.execute("select 1+1 from dual")
+    result = cur.fetchall()
+    print(result)
     cur.close()
     conn.commit()
     conn.close()

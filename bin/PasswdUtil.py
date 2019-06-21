@@ -43,3 +43,8 @@ if __name__ == '__main__':
             print (encrypt(sys.argv[2]))
         elif sys.argv[1] == '-d':
             print (decrypt(sys.argv[2]))
+        else:
+            LogUtil.log(name, 'Parameter error, please check and try again', 'error')
+    else:
+        LogUtil.log(name, 'Incorrect parameter length, please check and try again', 'error')
+
