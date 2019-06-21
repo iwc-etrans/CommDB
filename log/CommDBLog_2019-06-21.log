@@ -1,0 +1,38 @@
+[ 2019-06-21 14:54:02,942 ] - [ XmlUtil.py ] - [ line:42 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 14:55:08,170 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 14:55:24,956 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 14:55:24,957 ] - [ XmlUtil.py ] - [ line:61 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 14:56:06,576 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 14:56:06,577 ] - [ XmlUtil.py ] - [ line:61 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 14:56:38,163 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 14:56:38,164 ] - [ XmlUtil.py ] - [ line:62 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 14:59:08,370 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 14:59:08,371 ] - [ XmlUtil.py ] - [ line:62 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 14:59:21,229 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 14:59:21,229 ] - [ XmlUtil.py ] - [ line:62 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 14:59:37,564 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 14:59:37,567 ] - [ XmlUtil.py ] - [ line:62 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 15:00:12,743 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 15:00:12,744 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 15:00:32,680 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 15:00:32,681 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 15:00:43,059 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 15:00:43,061 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 15:00:49,099 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 15:00:49,100 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 15:01:52,103 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 15:01:52,105 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 15:02:13,384 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 15:02:13,385 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
+[ 2019-06-21 15:02:47,532 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 15:04:08,783 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 15:04:08,785 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 15:04:08,785 ] - [ XmlUtil.py ] - [ line:60 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 15:04:20,433 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 15:04:20,434 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 15:04:20,434 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 15:06:37,333 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 15:06:37,334 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 15:06:37,335 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 15:06:37,335 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 15:06:37,674 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
