@@ -12,6 +12,7 @@ from Crypto.Cipher import AES
 import LogUtil
 
 name = os.path.basename(__file__)
+log = LogUtil.Logger(name)
 
 # 加密函数
 def encrypt(originalPassword):
@@ -22,7 +23,7 @@ def encrypt(originalPassword):
     key = os.urandom(32)
     cipher = AES.new(key, AES.MODE_CBC, iv)
     encryptPassword = base64.b64encode(iv + cipher.encrypt(paddPassword) + key)
-    LogUtil.log(name, 'Password encryption success', 'info')
+    log.info('Password encryption success')
     return encryptPassword
 
 # 解密函数
@@ -34,7 +35,7 @@ def decrypt(encryptPassword):
     key = base64Decoded[-32:]
     cipher = AES.new(key, AES.MODE_CBC, iv)
     originalPassword = unpad(cipher.decrypt(base64Decoded[:-32]))[bs:]
-    LogUtil.log(name, 'Password decryption success', 'info')
+    log.info('Password decryption success')
     return originalPassword
 
 if __name__ == '__main__':
@@ -44,7 +45,7 @@ if __name__ == '__main__':
         elif sys.argv[1] == '-d':
             print (decrypt(sys.argv[2]))
         else:
-            LogUtil.log(name, 'Parameter error, please check and try again', 'error')
+            log.error('Parameter error, please check and try again')
     else:
-        LogUtil.log(name, 'Incorrect parameter length, please check and try again', 'error')
+        log.error('Incorrect parameter length, please check and try again')
 

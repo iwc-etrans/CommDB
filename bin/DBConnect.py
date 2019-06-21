@@ -19,7 +19,7 @@ except ImportError:
     import xml.etree.ElementTree as etree
 
 name = os.path.basename(__file__)
-
+log = LogUtil.Logger(name)
 
 # 获取数据库连接
 def getConnect(auth):
@@ -37,40 +37,39 @@ def getConnect(auth):
         try:
             if dbType == 'ORACLE':
                 if sid is None or sid == '':
-                    LogUtil.log(name, 'Sid not exists , the %s config is error'.format(program=auth), 'error')
+                    log.error('Sid not exists , the %s config is error'.format(program=auth))
                     sys.exit()
                 else:
-                    LogUtil.log(name, 'Exec connect oracle start ...', 'info')
+                    log.info('Exec connect oracle start ...')
                     # print(" cx_Oracle.connect({userName}, {passWord},'{host}:{port}/{sid}')".format(userName=userName,
                     #                                                                                 passWord=passWord,
                     #                                                                                 host=host,
                     #                                                                                 port=port, sid=sid))
                     connect = cx_Oracle.connect(userName, passWord,
                                                 '{host}:{port}/{sid}'.format(host=host, port=port, sid=sid))
-                    LogUtil.log(name, 'Connect oracle sucessful !', 'info')
+                    log.info('Connect oracle sucessful')
             elif dbType == 'MYSQL':
                 if serverName is None or sid == '':
-                    LogUtil.log(name, 'ServerName not exists , the %s config is error !!'.format(program=auth),
-                                'error')
+                    log.error('ServerName not exists , the %s config is error !!'.format(program=auth))
                     sys.exit()
                 else:
-                    LogUtil.log(name, 'Exec connect mysql start ...', 'info')
+                    log.info('Exec connect mysql start ...')
                     connect = pymysql.connect(host=host, port=int(port), user=userName, passwd=passWord,
                                               db=serverName, charset='utf8')
-                    LogUtil.log(name, 'Connect mysql sucessful !', 'info')
+                    log.info('Connect mysql sucessful.')
             elif dbType == 'POSTGRESQL':
-                LogUtil.log(name, 'Exec connect postgresql start ...', 'info')
+                log.info('Exec connect postgresql start ...')
                 connect = psycopg2.connect(database=serverName, user=userName, password=passWord, host=host,
                                            port=port)
-                LogUtil.log(name, 'Connect postgresql sucessful !', 'info')
-        except:
-            LogUtil.log(name, 'Connect to db failure ,please check config and try again !!', 'error')
+                log.info('Connect postgresql sucessful.')
+        except Exception as e:
+            log.info('Connect to db failure ,please check config and try again ..')
             connect = ""
-        return connect
+        return [dbType, connect]
 
 
 if __name__ == '__main__':
-    conn = getConnect('SCOTT_10.45.15.201')
+    dbType, conn = getConnect('SCOTT_10.45.15.201')
     cur = conn.cursor()
     cur.execute("select 1+1 from dual")
     result = cur.fetchall()
