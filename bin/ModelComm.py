@@ -7,14 +7,26 @@
 
 import DBConnect
 import LogUtil
-import VariableUtil
 import os
+import XmlUtil
 
 name = os.path.basename(__file__)
+log = LogUtil.Logger(name)
 
 
 def columnComm(tabname):
     dbType, conn = DBConnect.getConnect('SCOTT_10.45.15.201')
     if dbType == 'ORACLE':
-        LogUtil.log(name, "DB type is ORACLE, Start get columns...", "info")
-        sql = ""
+        log.info("DB type is ORACLE, Start get columns...")
+        sql = XmlUtil.dbSQL('COLUMN')
+        sqlformat=sql.format(tabname=tabname)
+        cur = conn.cursor()
+        cur.execute(sqlformat)
+        result = cur.fetchall()
+        print(result)
+        cur.close()
+        conn.commit()
+        conn.close()
+
+
+columnComm('EMP')

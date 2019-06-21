@@ -15,6 +15,8 @@ BIN_PATH = os.path.split(FILE_PATH)[0]
 CONF_PATH = os.path.abspath(BIN_PATH + '/../conf')
 #数据库配置路径
 DB_PATH = os.path.abspath(BIN_PATH + '/../conf/dbParams')
+#执行SQL配置路径
+SQL_PATH = os.path.abspath(BIN_PATH + '/../conf/SQL')
 #日志文件路径
 LOG_PATH = os.path.abspath(BIN_PATH + '/../log')
 #临时文件目录

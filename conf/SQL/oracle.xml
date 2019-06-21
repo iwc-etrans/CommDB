@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+    <type name="COLUMN">
+        <sql>select case when data_type = 'NUMBER' and data_scale = 0 and data_precision is not null then column_name ||
+            ' ' || data_type || '(' || data_precision || '),' when data_type = 'NUMBER' and data_scale = 0 and
+            data_precision is null then column_name || ' ' || data_type || ',' when data_type = 'NUMBER' and data_scale
+            > 0 then column_name || ' ' || data_type || '(' || data_precision || ',' || data_scale || '),' when
+            data_type = 'NUMBER' and data_scale is null then column_name || ' ' || data_type || ',' when data_type =
+            'VARCHAR2' then column_name || ' ' || data_type || '(' || data_length || '),' when data_type = 'CHAR' then
+            column_name || ' ' || data_type || '(' ||data_length || '),' when data_type = 'FLOAT' then column_name || '
+            ' || data_type || '(' || data_precision || '),' else column_name || ' ' || data_type || ',' end as crenotes
+            from user_tab_cols where table_name = '{tabname}' order by column_id
+        </sql>
+    </type>
+</configuration>

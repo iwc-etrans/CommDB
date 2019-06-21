@@ -1,38 +1,160 @@
-[ 2019-06-21 14:54:02,942 ] - [ XmlUtil.py ] - [ line:42 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 14:55:08,170 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 14:55:24,956 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 14:55:24,957 ] - [ XmlUtil.py ] - [ line:61 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 14:56:06,576 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 14:56:06,577 ] - [ XmlUtil.py ] - [ line:61 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 14:56:38,163 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 14:56:38,164 ] - [ XmlUtil.py ] - [ line:62 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 14:59:08,370 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 14:59:08,371 ] - [ XmlUtil.py ] - [ line:62 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 14:59:21,229 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 14:59:21,229 ] - [ XmlUtil.py ] - [ line:62 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 14:59:37,564 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 14:59:37,567 ] - [ XmlUtil.py ] - [ line:62 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 15:00:12,743 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 15:00:12,744 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 15:00:32,680 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 15:00:32,681 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 15:00:43,059 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 15:00:43,061 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 15:00:49,099 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 15:00:49,100 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 15:01:52,103 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 15:01:52,105 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 15:02:13,384 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 15:02:13,385 ] - [ XmlUtil.py ] - [ line:63 ] - ERROR : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis failure 
-[ 2019-06-21 15:02:47,532 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 15:04:08,783 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 15:04:08,785 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
-[ 2019-06-21 15:04:08,785 ] - [ XmlUtil.py ] - [ line:60 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
-[ 2019-06-21 15:04:20,433 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 15:04:20,434 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
-[ 2019-06-21 15:04:20,434 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
-[ 2019-06-21 15:06:37,333 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
-[ 2019-06-21 15:06:37,334 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
-[ 2019-06-21 15:06:37,335 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
-[ 2019-06-21 15:06:37,335 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
-[ 2019-06-21 15:06:37,674 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:42:57,234 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:42:57,235 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:42:57,235 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:42:57,235 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:42:57,436 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:42:57,436 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:42:57,437 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:42:57,437 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:45:28,390 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:45:28,390 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:45:28,391 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:45:28,391 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:45:28,669 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:45:28,669 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:45:28,669 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:45:28,670 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:48:38,063 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:48:38,064 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:48:38,065 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:48:38,065 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:48:38,445 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:48:38,445 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:48:38,446 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:48:38,447 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:48:58,235 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:48:58,235 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:48:58,235 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:48:58,235 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:48:58,449 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:48:58,450 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:48:58,450 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:48:58,451 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:49:13,016 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:49:13,017 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:49:13,017 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:49:13,017 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:49:13,254 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:49:13,254 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:49:13,254 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:49:13,255 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:49:27,542 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:49:27,542 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:49:27,543 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:49:27,543 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:49:27,809 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:49:27,810 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:49:27,810 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:49:27,810 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:49:36,155 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:49:36,156 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:49:36,156 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:49:36,156 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:49:36,684 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:49:36,685 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:49:36,685 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:49:36,686 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:49:42,594 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:49:42,594 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:49:42,595 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:49:42,595 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:49:42,853 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:49:42,853 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:49:42,854 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:49:42,854 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:49:56,636 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:49:56,636 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:49:56,637 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:49:56,637 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:49:56,854 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:49:56,855 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:49:56,855 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:49:56,857 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:50:01,624 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:50:01,625 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:50:01,625 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:50:01,625 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:50:01,860 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:50:01,860 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:50:01,860 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:50:01,861 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:50:50,044 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:50:50,045 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:50:50,045 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:50:50,045 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:50:50,924 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:50:50,925 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:50:50,925 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:50:50,925 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:50:50,988 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:50:50,988 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:50:50,988 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:50:50,989 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:50:51,514 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:50:51,514 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:50:51,514 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:50:51,515 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:51:14,535 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:51:14,536 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:51:14,537 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:51:14,537 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:51:14,986 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:51:14,987 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:51:14,987 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:51:14,988 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:51:34,902 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:51:34,903 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:51:34,903 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:51:34,903 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:51:35,159 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:51:35,160 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:51:35,160 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:51:35,160 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:52:02,872 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:52:02,873 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:52:02,873 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:52:02,873 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:52:03,062 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:52:03,062 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:52:03,062 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:52:03,063 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:52:16,956 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:52:16,956 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:52:16,957 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:52:16,957 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:52:17,246 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:52:17,246 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:52:17,246 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:52:17,246 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:54:21,665 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:54:21,667 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:54:21,667 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:54:21,668 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:54:21,891 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:54:21,891 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:54:21,891 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:54:21,891 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:55:30,183 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:55:30,184 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:55:30,184 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:55:30,184 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:55:30,381 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:55:30,381 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:55:30,381 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:55:30,382 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:55:41,654 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:55:41,655 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:55:41,655 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:55:41,655 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:55:41,848 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:55:41,849 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:55:41,849 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:55:41,849 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-21 16:55:58,247 ] - [ XmlUtil.py ] - [ line:43 ] - INFO : Start to analysis C:\Git\CommDB\conf\dbParams\db_commondb.xml
+[ 2019-06-21 16:55:58,248 ] - [ PasswdUtil.py ] - [ line:38 ] - INFO : Password decryption success
+[ 2019-06-21 16:55:58,248 ] - [ XmlUtil.py ] - [ line:59 ] - INFO : File C:\Git\CommDB\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-21 16:55:58,248 ] - [ DBConnect.py ] - [ line:43 ] - INFO : Exec connect oracle start ...
+[ 2019-06-21 16:55:58,534 ] - [ DBConnect.py ] - [ line:50 ] - INFO : Connect oracle sucessful
+[ 2019-06-21 16:55:58,534 ] - [ ModelComm.py ] - [ line:20 ] - INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-21 16:55:58,534 ] - [ XmlUtil.py ] - [ line:107 ] - INFO : Start to analysis C:\Git\CommDB\conf\SQL\oracle.xml
+[ 2019-06-21 16:55:58,535 ] - [ XmlUtil.py ] - [ line:118 ] - INFO : File C:\Git\CommDB\conf\SQL\oracle.xml analysis sucessful 
