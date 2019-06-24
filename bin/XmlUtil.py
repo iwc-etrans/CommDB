@@ -102,7 +102,7 @@ def dbCFGInfo(auth):
 
 
 # Oracle数据库解析
-def dbSQL(type):
+def dbExeSQL(type):
     taskName = VariableUtil.SQL_PATH + os.sep + 'oracle.xml'
     log.info('Start to analysis {taskName}'.format(taskName=taskName))
     result = ''
@@ -113,7 +113,7 @@ def dbSQL(type):
         # 遍历task所有子元素
         for elem in elemlist:
             for child in elem.getchildren():
-                print(child.tag, ":", child.text)
+                # print(child.tag, ":", child.text)
                 result = child.text
             log.info('File {taskName} analysis sucessful '.format(taskName=taskName))
     except Exception as e:
@@ -123,8 +123,8 @@ def dbSQL(type):
 
 
 if __name__ == '__main__':
-    # dbConfig = dbCFGInfo('SCOTT_10.45.15.201')
-    # print(dbConfig)
+    dbConfig = dbCFGInfo('SCOTT_10.45.15.205')
+    print(dbConfig)
 
-    result = dbSQL('COLUMN')
+    result = dbExeSQL('COLUMN')
     print(result)

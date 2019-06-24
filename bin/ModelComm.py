@@ -14,19 +14,44 @@ name = os.path.basename(__file__)
 log = LogUtil.Logger(name)
 
 
+def commpare(dict={}):
+    a = dict['SCOTT_10.45.15.201']
+    b = dict['SCOTT_10.45.15.205']
+    if len(list(set(b) - set(a))) == 0 and len(list(set(a) - set(b))) == 0:
+        log.info("Table field and type same")
+    else:
+        log.info("Table field and type different")
+        if len(list(set(b) - set(a))) > 0:
+            log.info("Elements in SCOTT_10.45.15.205 but not in SCOTT_10.45.15.201 ,detail:",
+                     ''.join(list(set(b) - set(a))))
+        elif len(list(set(a) - set(b))) > 0:
+            log.info("Elements in SCOTT_10.45.15.201 but not in SCOTT_10.45.15.205 ,detail:",
+                     ''.join(list(set(a) - set(b))))
+
+
 def columnComm(tabname):
-    dbType, conn = DBConnect.getConnect('SCOTT_10.45.15.201')
-    if dbType == 'ORACLE':
-        log.info("DB type is ORACLE, Start get columns...")
-        sql = XmlUtil.dbSQL('COLUMN')
-        sqlformat=sql.format(tabname=tabname)
-        cur = conn.cursor()
-        cur.execute(sqlformat)
-        result = cur.fetchall()
-        print(result)
-        cur.close()
-        conn.commit()
-        conn.close()
+    dbrange = ['SCOTT_10.45.15.201', 'SCOTT_10.45.15.205']  # 参数
+    dict = {}
+    for i in dbrange:
+        dbType, conn = DBConnect.getConnect(i)
+        # 暂时处理ORACLE
+        if dbType == 'ORACLE':
+            log.info("DB type is ORACLE, Start get columns...")
+            sql = XmlUtil.dbExeSQL('COLUMN')
+            sqlformat = sql.format(tabname=tabname)
+            cur = conn.cursor()
+            cur.execute(sqlformat)
+            result = cur.fetchall()
+            # 数据处理
+            array = []
+            for j in result:
+                array.append(j[0])
+            dict[i] = array
+            cur.close()
+            conn.commit()
+            conn.close()
+    return dict
 
 
-columnComm('EMP')
+dict = columnComm('EMP')
+commpare(dict)
