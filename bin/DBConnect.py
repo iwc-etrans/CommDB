@@ -38,7 +38,9 @@ def getDBinfo(auth):
                 if sid is not None and sid != '':
                     db_cfg = ['0', sid]
                 else:
-                    log.error('Wrong db config in db_commondb.xml with auth :{authname} ,servername and sid is null'.format(authname=auth))
+                    log.error(
+                        'Wrong db config in db_commondb.xml with auth :{authname} ,servername and sid is null'.format(
+                            authname=auth))
                     sys.exit()
             else:
                 db_cfg = ['1', serverName]
@@ -46,25 +48,25 @@ def getDBinfo(auth):
             if serverName is not None and serverName != '':
                 db_cfg = serverName
             else:
-                log.error('Wrong db config in db_commondb.xml with auth :{authname} ,servername is null'.format(authname=auth))
+                log.error('Wrong db config in db_commondb.xml with auth :{authname} ,servername is null'.format(
+                    authname=auth))
                 sys.exit()
         elif dbType == 'POSTGRESQL':
             if serverName is not None and serverName != '':
                 db_cfg = serverName
             else:
-                log.error('Wrong db config in db_commondb.xml with auth :{authname} ,servername is null'.format(authname=auth))
+                log.error('Wrong db config in db_commondb.xml with auth :{authname} ,servername is null'.format(
+                    authname=auth))
                 sys.exit()
         else:
             log.error('Wrong db config in db_commondb.xml with auth :{authname} ,wrong dbtype'.format(authname=auth))
             sys.exit()
         db_config = {'db_type': dbType, 'db_host': host, 'db_port': port, 'db_cfg': db_cfg,
-                         'db_username': userName, 'db_password': passWord}
+                     'db_username': userName, 'db_password': passWord}
         return db_config
     else:
         log.error('DB config is not available in db_commondb.xml with auth :{authname}'.format(authname=auth))
         sys.exit()
-
-
 
 
 def getConnect(auth):
@@ -86,16 +88,18 @@ def getConnect(auth):
             log.info('Connect oracle sucessful')
         elif dbType == 'MYSQL':
             log.info('Exec connect oracle start ...')
-            connect = pymysql.connect(host=host, port=int(port), user=userName, passwd=passWord,db=db_cfg, charset='utf8')
+            connect = pymysql.connect(host=host, port=int(port), user=userName, passwd=passWord, db=db_cfg,
+                                      charset='utf8')
             log.info('Connect oracle sucessful')
         elif dbType == 'POSTGRESQL':
             log.info('Exec connect oracle start ...')
-            connect = psycopg2.connect(database=db_cfg, user=userName, password=passWord, host=host,port=port)
+            connect = psycopg2.connect(database=db_cfg, user=userName, password=passWord, host=host, port=port)
             log.info('Connect oracle sucessful')
     except Exception as e:
         log.info('Connect to db failure ,please check config and try again ..')
         connect = ""
     return [dbType, connect]
+
 
 if __name__ == '__main__':
     dbType, conn = getConnect('SCOTT_10.45.15.201')
