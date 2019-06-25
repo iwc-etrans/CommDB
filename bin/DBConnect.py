@@ -21,8 +21,8 @@ except ImportError:
 name = os.path.basename(__file__)
 log = LogUtil.Logger(name)
 
-# 获取数据库连接
-def getConnect(auth):
+
+def getDBinfo(auth):
     config = dbCFGInfo(auth)
     cronConfig = config[auth]
     if cronConfig['enable'] == 'Ture':
@@ -33,40 +33,65 @@ def getConnect(auth):
         serverName = cronConfig['serverName']
         userName = cronConfig['userName']
         passWord = cronConfig['passWord']
-        # print(dbType, host, port, sid, serverName, userName, passWord)
-        try:
-            if dbType == 'ORACLE':
-                if sid is None or sid == '':
-                    log.error('Sid not exists , the %s config is error'.format(program=auth))
-                    sys.exit()
+        if dbType == 'ORACLE':
+            if serverName is None or serverName == '':
+                if sid is not None and sid != '':
+                    db_cfg = ['0', sid]
                 else:
-                    log.info('Exec connect oracle start ...')
-                    # print(" cx_Oracle.connect({userName}, {passWord},'{host}:{port}/{sid}')".format(userName=userName,
-                    #                                                                                 passWord=passWord,
-                    #                                                                                 host=host,
-                    #                                                                                 port=port, sid=sid))
-                    connect = cx_Oracle.connect(userName, passWord,
-                                                '{host}:{port}/{sid}'.format(host=host, port=port, sid=sid))
-                    log.info('Connect oracle sucessful')
-            elif dbType == 'MYSQL':
-                if serverName is None or sid == '':
-                    log.error('ServerName not exists , the %s config is error !!'.format(program=auth))
+                    log.error('Wrong db config in db_commondb.xml with auth :{authname} ,servername and sid is null'.format(authname=auth))
                     sys.exit()
-                else:
-                    log.info('Exec connect mysql start ...')
-                    connect = pymysql.connect(host=host, port=int(port), user=userName, passwd=passWord,
-                                              db=serverName, charset='utf8')
-                    log.info('Connect mysql sucessful.')
-            elif dbType == 'POSTGRESQL':
-                log.info('Exec connect postgresql start ...')
-                connect = psycopg2.connect(database=serverName, user=userName, password=passWord, host=host,
-                                           port=port)
-                log.info('Connect postgresql sucessful.')
-        except Exception as e:
-            log.info('Connect to db failure ,please check config and try again ..')
-            connect = ""
-        return [dbType, connect]
+            else:
+                db_cfg = ['1', serverName]
+        elif dbType == 'MYSQL':
+            if serverName is not None and serverName != '':
+                db_cfg = serverName
+            else:
+                log.error('Wrong db config in db_commondb.xml with auth :{authname} ,servername is null'.format(authname=auth))
+                sys.exit()
+        elif dbType == 'POSTGRESQL':
+            if serverName is not None and serverName != '':
+                db_cfg = serverName
+            else:
+                log.error('Wrong db config in db_commondb.xml with auth :{authname} ,servername is null'.format(authname=auth))
+                sys.exit()
+        else:
+            log.error('Wrong db config in db_commondb.xml with auth :{authname} ,wrong dbtype'.format(authname=auth))
+            sys.exit()
+    db_config = {'db_type': dbType, 'db_host': host, 'db_port': port, 'db_cfg': db_cfg,
+                 'db_username': userName, 'db_password': passWord}
+    return db_config
 
+
+
+def getConnect(auth):
+    db_config = getDBinfo(auth)
+    dbType = db_config['db_type']
+    host = db_config['db_host']
+    port = db_config['db_port']
+    userName = db_config['db_username']
+    passWord = db_config['db_password']
+    db_cfg = db_config['db_cfg']
+    try:
+        if dbType == 'ORACLE':
+            log.info('Exec connect oracle start ...')
+            if db_cfg[0] == '0':
+                dsn = cx_Oracle.makedsn(host, port, db_cfg[1])
+            elif db_cfg[0] == '1':
+                dsn = cx_Oracle.makedsn(host, port, service_name=db_cfg[1])
+            connect = cx_Oracle.connect(userName, passWord, dsn)
+            log.info('Connect oracle sucessful')
+        elif dbType == 'MYSQL':
+            log.info('Exec connect oracle start ...')
+            connect = pymysql.connect(host=host, port=int(port), user=userName, passwd=passWord,db=db_cfg, charset='utf8')
+            log.info('Connect oracle sucessful')
+        elif dbType == 'POSTGRESQL':
+            log.info('Exec connect oracle start ...')
+            connect = psycopg2.connect(database=db_cfg, user=userName, password=passWord, host=host,port=port)
+            log.info('Connect oracle sucessful')
+    except Exception as e:
+        log.info('Connect to db failure ,please check config and try again ..')
+        connect = ""
+    return [dbType, connect]
 
 if __name__ == '__main__':
     dbType, conn = getConnect('SCOTT_10.45.15.201')
