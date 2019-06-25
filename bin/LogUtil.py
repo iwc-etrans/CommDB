@@ -16,6 +16,10 @@ class Logger(logging.Logger):
         self.name = name
 
         LOG_PATH = VariableUtil.LOG_PATH
+        if os.path.exists(LOG_PATH):
+            1
+        else:
+            os.mkdir(LOG_PATH)
         currDate = datetime.datetime.now().strftime('%Y-%m-%d')
         logFile = LOG_PATH + os.sep + 'CommDBLog_{currDate}.log'.format(currDate=currDate)
 
