@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2019/6/13 8:48
-# @Author  : IWC
+# @Author  : Fcvane
 # @Param   : 日志通用方法
 # @File    : LogUtil.py
 
@@ -24,7 +24,7 @@ class Logger(logging.Logger):
         ch.setLevel(logging.INFO)
 
         formatter = logging.Formatter(
-            '[ %(asctime)s ] - [ %(filename)s ] - [ line:%(lineno)d ] - %(levelname)s : %(message)s', )
+            '[ %(asctime)s ] - [ %(filename)15s ] - [ line:%(lineno)5d ] - %(levelname)5s : %(message)s', )
         # datefmt='%Y-%m-%d %H:%M:%S')
         # 获取logger名称
         logger = logging.getLogger()
@@ -63,4 +63,3 @@ class Logger(logging.Logger):
         # def error(cls, msg):
         #     cls.logger.error(msg)
         #     return
-
