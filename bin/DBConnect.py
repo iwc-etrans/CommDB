@@ -57,9 +57,13 @@ def getDBinfo(auth):
         else:
             log.error('Wrong db config in db_commondb.xml with auth :{authname} ,wrong dbtype'.format(authname=auth))
             sys.exit()
-    db_config = {'db_type': dbType, 'db_host': host, 'db_port': port, 'db_cfg': db_cfg,
-                 'db_username': userName, 'db_password': passWord}
-    return db_config
+        db_config = {'db_type': dbType, 'db_host': host, 'db_port': port, 'db_cfg': db_cfg,
+                         'db_username': userName, 'db_password': passWord}
+        return db_config
+    else:
+        log.error('DB config is not available in db_commondb.xml with auth :{authname}'.format(authname=auth))
+        sys.exit()
+
 
 
 
