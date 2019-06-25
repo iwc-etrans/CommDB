@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2019/6/12 16:24
-# @Author  : Fcvane
+# @Author  : IWC
 # @Param   : 数据库连接
 # @File    : DBConnect.py
 

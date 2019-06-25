@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2019/6/12 15:39
-# @Author  : Fcvane
+# @Author  : IWC
 # @Param   : 加密&解密
 # @File    : PasswdUtil.py
 

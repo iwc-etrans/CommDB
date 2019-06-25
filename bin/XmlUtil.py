@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2019/6/13 8:47
-# @Author  : Fcvane
+# @Author  : IWC
 # @Param   : 配置文件解析
 # @File    : XmlAnalysis.py
 

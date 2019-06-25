@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2019/6/21 8:50
-# @Author  : Fcvane
+# @Author  : IWC
 # @Param   : 模型比对
 # @File    : ModelComm.py
 

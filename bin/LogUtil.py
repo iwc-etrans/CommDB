@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2019/6/13 8:48
-# @Author  : Fcvane
+# @Author  : IWC
 # @Param   : 日志通用方法
 # @File    : LogUtil.py
 
