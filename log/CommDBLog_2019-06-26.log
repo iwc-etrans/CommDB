@@ -1,0 +1,251 @@
+[ 2019-06-26 11:19:39,124 ] - [    ModelComm.py ] - [ line:   59 ] -  INFO : Start to check table column name and type ..
+[ 2019-06-26 11:19:39,124 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:19:39,136 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:19:39,136 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:19:39,136 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:19:39,309 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:19:39,309 ] - [    ModelComm.py ] - [ line:   66 ] -  INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-26 11:19:39,309 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:19:39,315 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:20:22,126 ] - [    ModelComm.py ] - [ line:   59 ] -  INFO : Start to check table column name and type ..
+[ 2019-06-26 11:20:22,127 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:20:22,127 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:20:22,128 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:20:22,128 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:20:22,332 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:20:22,332 ] - [    ModelComm.py ] - [ line:   66 ] -  INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-26 11:20:22,332 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:20:22,333 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:20:22,334 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:20:22,343 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:20:22,343 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessfu.l
+[ 2019-06-26 11:20:22,354 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:20:22,354 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:20:22,355 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:20:22,355 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:20:22,355 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:20:22,416 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:20:22,416 ] - [    ModelComm.py ] - [ line:   66 ] -  INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-26 11:20:22,417 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:20:22,417 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:20:22,417 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:20:22,425 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:20:22,426 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessfu.l
+[ 2019-06-26 11:20:22,443 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:20:22,443 ] - [    ModelComm.py ] - [ line:   41 ] -  INFO : Consistent structure different
+[ 2019-06-26 11:20:22,456 ] - [    ModelComm.py ] - [ line:   49 ] - ERROR : Elements TT NUMBER, in SCOTT_10.45.15.205 but not in SCOTT_10.45.15.201
+[ 2019-06-26 11:20:22,463 ] - [    ModelComm.py ] - [ line:   81 ] -  INFO : Start to check table constraint ..
+[ 2019-06-26 11:20:22,463 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:20:22,463 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:20:22,463 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:20:22,464 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:20:22,552 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:20:22,552 ] - [    ModelComm.py ] - [ line:   88 ] -  INFO : DB type is ORACLE, Start get constraints...
+[ 2019-06-26 11:20:22,552 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:20:22,553 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:20:22,561 ] - [       RunSQL.py ] - [ line:   27 ] - ERROR : Executor SQL failure..
+[ 2019-06-26 11:20:22,561 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessfu.l
+[ 2019-06-26 11:20:22,581 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:25:58,993 ] - [    ModelComm.py ] - [ line:   59 ] -  INFO : Start to check table column name and type ..
+[ 2019-06-26 11:25:58,993 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:25:58,994 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:25:58,994 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:25:58,994 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:25:59,174 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:25:59,174 ] - [    ModelComm.py ] - [ line:   66 ] -  INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-26 11:25:59,174 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:25:59,175 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:25:59,175 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:25:59,186 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:25:59,186 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:25:59,195 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:25:59,195 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:25:59,195 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:25:59,195 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:25:59,195 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:25:59,248 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:25:59,249 ] - [    ModelComm.py ] - [ line:   66 ] -  INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-26 11:25:59,249 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:25:59,249 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:25:59,249 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:25:59,257 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:25:59,257 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:25:59,276 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:25:59,276 ] - [    ModelComm.py ] - [ line:   41 ] -  INFO : Consistent structure different
+[ 2019-06-26 11:25:59,284 ] - [    ModelComm.py ] - [ line:   49 ] - ERROR : Elements TT NUMBER, in SCOTT_10.45.15.205 but not in SCOTT_10.45.15.201
+[ 2019-06-26 11:25:59,289 ] - [    ModelComm.py ] - [ line:   81 ] -  INFO : Start to check table constraint ..
+[ 2019-06-26 11:25:59,289 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:25:59,289 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:25:59,290 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:25:59,290 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:25:59,369 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:25:59,369 ] - [    ModelComm.py ] - [ line:   88 ] -  INFO : DB type is ORACLE, Start get constraints...
+[ 2019-06-26 11:25:59,369 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:25:59,369 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:25:59,370 ] - [       RunSQL.py ] - [ line:   27 ] - ERROR : Executor SQL failure..
+[ 2019-06-26 11:25:59,370 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:25:59,379 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:28,217 ] - [    ModelComm.py ] - [ line:   59 ] -  INFO : Start to check table column name and type ..
+[ 2019-06-26 11:27:28,218 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:28,219 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:28,220 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:28,220 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:28,428 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:28,428 ] - [    ModelComm.py ] - [ line:   66 ] -  INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-26 11:27:28,428 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:28,429 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:28,429 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:28,438 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:28,438 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:28,448 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:28,448 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:28,449 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:28,450 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:28,450 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:28,507 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:28,507 ] - [    ModelComm.py ] - [ line:   66 ] -  INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-26 11:27:28,507 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:28,508 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:28,508 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:28,516 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:28,516 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:28,535 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:28,535 ] - [    ModelComm.py ] - [ line:   41 ] -  INFO : Consistent structure different
+[ 2019-06-26 11:27:28,546 ] - [    ModelComm.py ] - [ line:   49 ] - ERROR : Elements TT NUMBER, in SCOTT_10.45.15.205 but not in SCOTT_10.45.15.201
+[ 2019-06-26 11:27:28,550 ] - [    ModelComm.py ] - [ line:   81 ] -  INFO : Start to check table constraint ..
+[ 2019-06-26 11:27:28,550 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:28,550 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:28,550 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:28,550 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:28,631 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:28,631 ] - [    ModelComm.py ] - [ line:   88 ] -  INFO : DB type is ORACLE, Start get constraints...
+[ 2019-06-26 11:27:28,631 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:28,631 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:28,632 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:28,643 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:28,644 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:28,657 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:28,657 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:28,658 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:28,658 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:28,659 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:28,715 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:28,715 ] - [    ModelComm.py ] - [ line:   88 ] -  INFO : DB type is ORACLE, Start get constraints...
+[ 2019-06-26 11:27:28,716 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:28,717 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:28,719 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:28,728 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:28,728 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:28,752 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:28,752 ] - [    ModelComm.py ] - [ line:   41 ] -  INFO : Consistent structure different
+[ 2019-06-26 11:27:28,762 ] - [    ModelComm.py ] - [ line:   49 ] - ERROR : Elements SYS_C0010856@C_EMPNO||PK_EMP@P_EMPNO_1,P_JOB_2 in SCOTT_10.45.15.205 but not in SCOTT_10.45.15.201
+[ 2019-06-26 11:27:28,769 ] - [    ModelComm.py ] - [ line:   53 ] - ERROR : Elements SYS_C0010856@C_EMPNO||PK_EMP@P_EMPNO_1,P_JOB_2 in SCOTT_10.45.15.201 but not in SCOTT_10.45.15.205
+[ 2019-06-26 11:27:28,776 ] - [    ModelComm.py ] - [ line:  104 ] -  INFO : Start to check table index ..
+[ 2019-06-26 11:27:28,776 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:28,776 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:28,777 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:28,777 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:28,859 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:28,860 ] - [    ModelComm.py ] - [ line:  111 ] -  INFO : DB type is ORACLE, Start get indexes...
+[ 2019-06-26 11:27:28,860 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:28,860 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:28,861 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:28,869 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:28,869 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:28,880 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:28,880 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:28,881 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:28,881 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:28,881 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:28,940 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:28,940 ] - [    ModelComm.py ] - [ line:  111 ] -  INFO : DB type is ORACLE, Start get indexes...
+[ 2019-06-26 11:27:28,941 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:28,942 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:28,942 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:28,947 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:28,947 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:28,968 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:28,968 ] - [    ModelComm.py ] - [ line:   41 ] -  INFO : Consistent structure different
+[ 2019-06-26 11:27:28,985 ] - [    ModelComm.py ] - [ line:   49 ] - ERROR : Elements PK_EMP@EMPNO_1_ASC,JOB_2_ASC in SCOTT_10.45.15.205 but not in SCOTT_10.45.15.201
+[ 2019-06-26 11:27:28,992 ] - [    ModelComm.py ] - [ line:   53 ] - ERROR : Elements PK_EMP@EMPNO_1_ASC,JOB_2_ASC in SCOTT_10.45.15.201 but not in SCOTT_10.45.15.205
+[ 2019-06-26 11:27:29,208 ] - [    ModelComm.py ] - [ line:   59 ] -  INFO : Start to check table column name and type ..
+[ 2019-06-26 11:27:29,208 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:29,209 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:29,209 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:29,210 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:29,287 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:29,287 ] - [    ModelComm.py ] - [ line:   66 ] -  INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-26 11:27:29,287 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:29,288 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:29,288 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:29,441 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:29,441 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:29,480 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:29,481 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:29,483 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:29,483 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:29,483 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:29,840 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:29,840 ] - [    ModelComm.py ] - [ line:   66 ] -  INFO : DB type is ORACLE, Start get columns...
+[ 2019-06-26 11:27:29,840 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:29,841 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:29,841 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:29,862 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:29,862 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:29,879 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:29,879 ] - [    ModelComm.py ] - [ line:   33 ] -  INFO : Consistent structure same
+[ 2019-06-26 11:27:29,910 ] - [    ModelComm.py ] - [ line:   38 ] -  INFO : Elements LOC VARCHAR2(13), DEPTNO NUMBER(2), DNAME VARCHAR2(14), in SCOTT_10.45.15.201 and SCOTT_10.45.15.205
+[ 2019-06-26 11:27:30,229 ] - [    ModelComm.py ] - [ line:   81 ] -  INFO : Start to check table constraint ..
+[ 2019-06-26 11:27:30,231 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:30,232 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:30,232 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:30,233 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:30,615 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:30,615 ] - [    ModelComm.py ] - [ line:   88 ] -  INFO : DB type is ORACLE, Start get constraints...
+[ 2019-06-26 11:27:30,615 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:30,616 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:30,617 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:30,626 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:30,627 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:30,636 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:30,637 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:30,638 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:30,638 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:30,639 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:30,705 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:30,705 ] - [    ModelComm.py ] - [ line:   88 ] -  INFO : DB type is ORACLE, Start get constraints...
+[ 2019-06-26 11:27:30,706 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:30,708 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:30,708 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:30,716 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:30,717 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:30,770 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:30,770 ] - [    ModelComm.py ] - [ line:   41 ] -  INFO : Consistent structure different
+[ 2019-06-26 11:27:31,082 ] - [    ModelComm.py ] - [ line:   49 ] - ERROR : Elements SYS_C0010857@C_DEPTNO in SCOTT_10.45.15.205 but not in SCOTT_10.45.15.201
+[ 2019-06-26 11:27:31,155 ] - [    ModelComm.py ] - [ line:  104 ] -  INFO : Start to check table index ..
+[ 2019-06-26 11:27:31,155 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:31,157 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:31,157 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:31,157 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:31,241 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:31,241 ] - [    ModelComm.py ] - [ line:  111 ] -  INFO : DB type is ORACLE, Start get indexes...
+[ 2019-06-26 11:27:31,242 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:31,242 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:31,242 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:31,249 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:31,249 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:31,259 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:31,260 ] - [      XmlUtil.py ] - [ line:   43 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml
+[ 2019-06-26 11:27:31,261 ] - [   PasswdUtil.py ] - [ line:   38 ] -  INFO : Password decryption success
+[ 2019-06-26 11:27:31,261 ] - [      XmlUtil.py ] - [ line:   59 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\dbParams\db_commondb.xml analysis sucessful 
+[ 2019-06-26 11:27:31,261 ] - [    DBConnect.py ] - [ line:   82 ] -  INFO : Exec connect oracle start ...
+[ 2019-06-26 11:27:31,316 ] - [    DBConnect.py ] - [ line:   88 ] -  INFO : Connect oracle sucessful
+[ 2019-06-26 11:27:31,317 ] - [    ModelComm.py ] - [ line:  111 ] -  INFO : DB type is ORACLE, Start get indexes...
+[ 2019-06-26 11:27:31,317 ] - [      XmlUtil.py ] - [ line:  107 ] -  INFO : Start to analysis C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml
+[ 2019-06-26 11:27:31,317 ] - [      XmlUtil.py ] - [ line:  118 ] -  INFO : File C:\Git\Python\CommDB_iwc\conf\SQL\oracle.xml analysis sucessful 
+[ 2019-06-26 11:27:31,318 ] - [       RunSQL.py ] - [ line:   19 ] -  INFO : Open database connection
+[ 2019-06-26 11:27:31,322 ] - [       RunSQL.py ] - [ line:   25 ] -  INFO : Start to executor SQL ..
+[ 2019-06-26 11:27:31,323 ] - [       RunSQL.py ] - [ line:   30 ] -  INFO : Executor SQL sucessful
+[ 2019-06-26 11:27:31,334 ] - [       RunSQL.py ] - [ line:   34 ] -  INFO : Close database connection..
+[ 2019-06-26 11:27:31,335 ] - [    ModelComm.py ] - [ line:   33 ] -  INFO : Consistent structure same
+[ 2019-06-26 11:27:31,340 ] - [    ModelComm.py ] - [ line:   38 ] -  INFO : Elements PK_DEPT@DEPTNO_1_ASC in SCOTT_10.45.15.201 and SCOTT_10.45.15.205

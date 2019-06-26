@@ -14,8 +14,8 @@ import os, sys
 name = os.path.basename(__file__)
 log = LogUtil.Logger(name)
 
-def runSQL(sql):
-    dbType, conn = DBConnect.getConnect('SCOTT_10.45.15.201')
+
+def runSQL(conn, sql):
     log.info('Open database connection')
     cur = conn.cursor()
     result = ""
@@ -27,7 +27,7 @@ def runSQL(sql):
         log.error('Executor SQL failure..')
         sys.exit()
     finally:
-        log.info('Executor SQL sucessfu.l')
+        log.info('Executor SQL sucessful')
         cur.close()
         conn.commit()
         conn.close()

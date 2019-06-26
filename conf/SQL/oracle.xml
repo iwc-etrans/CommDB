@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <configuration>
+    <!--字段-->
     <type name="COLUMN">
         <sql>select case when data_type = 'NUMBER' and data_scale = 0 and data_precision is not null then column_name ||
             ' ' || data_type || '(' || data_precision || '),' when data_type = 'NUMBER' and data_scale = 0 and
@@ -10,6 +11,28 @@
             column_name || ' ' || data_type || '(' ||data_length || '),' when data_type = 'FLOAT' then column_name || '
             ' || data_type || '(' || data_precision || '),' else column_name || ' ' || data_type || ',' end as crenotes
             from user_tab_cols where table_name = '{tabname}' order by column_id
+        </sql>
+    </type>
+    <!--约束-->
+    <!--wm_concat - 12C 不兼容-->
+    <type name="CONSTRAINT">
+        <sql>select constraint_name,listagg(constraint_detail,',') within group(order by constraint_name)
+            constraint_detail from (select t1.constraint_name, case when
+            t2.position is null
+            then t1.constraint_type ||'_'|| t2.column_name else t1.constraint_type ||'_'|| t2.column_name ||'_'||
+            t2.position end constraint_detail from user_constraints t1 join user_cons_columns t2 on t1.constraint_name =
+            t2.constraint_name and t1.table_name = t2.table_name where t1.table_name = '{tabname}') t group by
+            constraint_name
+        </sql>
+    </type>
+    <!--索引-->
+    <type name="INDEX">
+        <sql>select index_name, listagg(index_detail, ',') within group(order by index_name) index_detail from (select
+            t1.index_name,
+            t2.column_name || '_' || t2.column_position || '_' || t2.descend index_detail from user_indexes t1 join
+            (select index_name,table_name,column_name,column_position,descend from user_ind_columns order by index_name,
+            column_position) t2 on t1.index_name = t2.index_name and t1.table_name = t2.table_name where t1.table_name =
+            '{tabname}') t group by index_name
         </sql>
     </type>
 </configuration>
