@@ -5,6 +5,7 @@
 # @Param   : 日志通用方法
 # @File    : LogUtil.py
 
+
 import os
 import datetime
 import logging.handlers
@@ -16,10 +17,6 @@ class Logger(logging.Logger):
         self.name = name
 
         LOG_PATH = VariableUtil.LOG_PATH
-        if os.path.exists(LOG_PATH):
-            1
-        else:
-            os.mkdir(LOG_PATH)
         currDate = datetime.datetime.now().strftime('%Y-%m-%d')
         logFile = LOG_PATH + os.sep + 'CommDBLog_{currDate}.log'.format(currDate=currDate)
 
@@ -43,27 +40,3 @@ class Logger(logging.Logger):
             # 控制台打印
             self.addHandler(ch)
 
-        # # name, description, flag
-        # # if flag == "info":
-        # #     logger.info(description)
-        # # elif flag == "warning":
-        # #     logger.warning(description)
-        # # elif flag == "error":
-        # #     logger.error(description)
-        # # else:
-        # #     logger.error("parameter error, please check and try again .")
-        # # 日志接口，用户只需调用这里的接口即可，这里只定位了INFO, WARNING, ERROR三个级别的日志，可根据需要定义更多接口
-        # @classmethod
-        # def info(cls, msg, name):
-        #     cls(name).logger.info(msg)
-        #     return
-        #
-        # @classmethod
-        # def warning(cls, msg, name):
-        #     cls(name).logger.warning(msg)
-        #     return
-        #
-        # @classmethod
-        # def error(cls, msg):
-        #     cls.logger.error(msg)
-        #     return

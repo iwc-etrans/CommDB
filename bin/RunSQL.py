@@ -22,14 +22,47 @@ def runSQL(conn, sql):
     try:
         cur.execute(sql)
         result = cur.fetchall()
-        log.info('Start to executor SQL ..')
+        log.info('Start to executor SQL')
     except Exception as e:
-        log.error('Executor SQL failure..')
+        log.error('Executor SQL failure')
         sys.exit()
     finally:
         log.info('Executor SQL sucessful')
         cur.close()
         conn.commit()
         conn.close()
-        log.info('Close database connection..')
+        log.info('Close database connection')
     return result
+
+
+def ddlSQL(conn, sql):
+    log.info('Open database connection')
+    cur = conn.cursor()
+    try:
+        cur.execute(sql)
+        log.info('Start to executor DDL SQL')
+    except Exception as e:
+        log.error('Executor DDL SQL failure')
+        sys.exit()
+    finally:
+        log.info('Executor DDL SQL sucessful')
+        cur.close()
+        conn.close()
+        log.info('Close database connection')
+
+
+def dmlManySQL(conn, sql, array=[]):
+    log.info('Open database connection')
+    cur = conn.cursor()
+    try:
+        cur.executemany(sql, array)
+        log.info('Start to executor DML SQL')
+    except Exception as e:
+        log.error('Executor DML SQL failure')
+        sys.exit()
+    finally:
+        log.info('Executor DML SQL sucessful')
+        cur.close()
+        conn.commit()
+        conn.close()
+        log.info('Close database connection')

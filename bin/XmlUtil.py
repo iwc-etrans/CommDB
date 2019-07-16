@@ -5,6 +5,7 @@
 # @Param   : 配置文件解析
 # @File    : XmlAnalysis.py
 
+
 import PasswdUtil
 import os, sys
 import LogUtil
@@ -127,4 +128,4 @@ if __name__ == '__main__':
     print(dbConfig)
 
     result = dbExeSQL('COLUMN')
-    print(result)
+    # print(result)
