@@ -11,6 +11,7 @@ import cx_Oracle
 import psycopg2
 import pymysql
 import LogUtil
+from impala.dbapi import connect as impc
 from XmlUtil import dbCFGInfo
 
 try:
@@ -58,6 +59,9 @@ def getDBinfo(auth):
                 log.error('Wrong db config in db_commondb.xml with auth :{authname} ,servername is null'.format(
                     authname=auth))
                 sys.exit()
+        elif dbType == 'IMPALA_KUDU':
+            None
+            db_cfg = ''
         else:
             log.error('Wrong db config in db_commondb.xml with auth :{authname} ,wrong dbtype'.format(authname=auth))
             sys.exit()
@@ -87,24 +91,28 @@ def getConnect(auth):
             connect = cx_Oracle.connect(userName, passWord, dsn)
             log.info('Connect oracle sucessful')
         elif dbType == 'MYSQL':
-            log.info('Exec connect oracle start ...')
+            log.info('Exec connect mysql start ...')
             connect = pymysql.connect(host=host, port=int(port), user=userName, passwd=passWord, db=db_cfg,
                                       charset='utf8')
-            log.info('Connect oracle sucessful')
+            log.info('Connect mysql sucessful')
         elif dbType == 'POSTGRESQL':
-            log.info('Exec connect oracle start ...')
+            log.info('Exec connect postgresql start ...')
             connect = psycopg2.connect(database=db_cfg, user=userName, password=passWord, host=host, port=port)
-            log.info('Connect oracle sucessful')
+            log.info('Connect postgresql sucessful')
+        elif dbType == 'IMPALA_KUDU':
+            log.info('Exec connect impala kudu start ...')
+            connect = impc(host=host, port=int(port))
+            log.info('Connect impala kudu sucessful')
     except Exception as e:
         log.info('Connect to db failure ,please check config and try again ..')
-        connect = ""
+        sys.exit()
     return [dbType, connect]
 
 
 if __name__ == '__main__':
-    dbType, conn = getConnect('SCOTT_10.45.15.201')
+    dbType, conn = getConnect('impala_10.45.59.160')
     cur = conn.cursor()
-    cur.execute("select 1+1 from dual")
+    cur.execute("show tables;")
     result = cur.fetchall()
     print(result)
     cur.close()

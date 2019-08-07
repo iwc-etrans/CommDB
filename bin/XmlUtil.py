@@ -53,7 +53,10 @@ def dbCFGInfo(auth):
             for child in elem.getchildren():
                 # print(child.tag, ":", child.text)
                 if child.tag == "passWord":
-                    array[child.tag] = PasswdUtil.decrypt(child.text)
+                    if child.text is not None:
+                        array[child.tag] = PasswdUtil.decrypt(child.text)
+                    else:
+                        array[child.tag] = ''
                 else:
                     array[child.tag] = child.text
             result[elem.attrib['id']] = array
