@@ -60,8 +60,12 @@ def getDBinfo(auth):
                     authname=auth))
                 sys.exit()
         elif dbType == 'IMPALA_KUDU':
-            None
-            db_cfg = ''
+            if serverName is not None and serverName != '':
+                db_cfg = serverName
+            else:
+                log.error('Wrong db config in db_commondb.xml with auth :{authname} ,servername is null'.format(
+                    authname=auth))
+                sys.exit()
         else:
             log.error('Wrong db config in db_commondb.xml with auth :{authname} ,wrong dbtype'.format(authname=auth))
             sys.exit()
@@ -101,7 +105,7 @@ def getConnect(auth):
             log.info('Connect postgresql sucessful')
         elif dbType == 'IMPALA_KUDU':
             log.info('Exec connect impala kudu start ...')
-            connect = impc(host=host, port=int(port))
+            connect = impc(host=host, port=int(port),database=db_cfg)
             log.info('Connect impala kudu sucessful')
     except Exception as e:
         log.info('Connect to db failure ,please check config and try again ..')

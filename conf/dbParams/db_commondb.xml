@@ -20,6 +20,17 @@ password - 密码
         <enable>Ture</enable>
     </auth>
 
+    <auth id="SCOTT_10.45.15.201">
+        <dbType>ORACLE</dbType>
+        <host>10.45.15.201</host>
+        <port>1521</port>
+        <sid>orcl</sid>
+        <serverName></serverName>
+        <userName>test_like</userName>
+        <passWord>qVc727/7Q+YRCC9rOgKSWgbIlQJ2uI8Cw8jqj4KfCJHmzzEXXlSWxdIHugR/BSKVIIpnvycmw0GCnWRdJjTLiA==</passWord>
+        <enable>Ture</enable>
+    </auth>
+
     <auth id="SCOTT_10.45.15.205">
         <dbType>ORACLE</dbType>
         <host>10.45.15.205</host>
@@ -36,7 +47,7 @@ password - 密码
         <host>10.45.59.160</host>
         <port>21050</port>
         <sid></sid>
-        <serverName></serverName>
+        <serverName>iwc_kudu</serverName>
         <userName></userName>
         <passWord></passWord>
         <enable>Ture</enable>

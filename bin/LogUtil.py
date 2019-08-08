@@ -22,8 +22,8 @@ class Logger(logging.Logger):
 
         fh = logging.FileHandler(logFile, mode='a')
         ch = logging.StreamHandler()
-        ch.setLevel(logging.INFO)
-
+        ch.setLevel(logging.DEBUG)
+        fh.setLevel(logging.INFO)
         formatter = logging.Formatter(
             '[ %(asctime)s ] - [ %(filename)15s ] - [ line:%(lineno)5d ] - %(levelname)5s : %(message)s', )
         # datefmt='%Y-%m-%d %H:%M:%S')

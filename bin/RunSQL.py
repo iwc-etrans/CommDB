@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2019/6/21 9:39
 # @Author  : IWC
-# @Param   : 
+# @Param   :
 # @File    : RunSQL.py
 
 
@@ -20,14 +20,15 @@ def runSQL(conn, sql):
     cur = conn.cursor()
     result = ""
     try:
+        log.info('Start to executor SQL')
         cur.execute(sql)
         result = cur.fetchall()
-        log.info('Start to executor SQL')
+        log.info('Executor SQL sucessful')
     except Exception as e:
-        log.error('Executor SQL failure')
+        print(e)
+        log.error("Executor SQL failure %s",e)
         sys.exit()
     finally:
-        log.info('Executor SQL sucessful')
         cur.close()
         conn.commit()
         conn.close()
