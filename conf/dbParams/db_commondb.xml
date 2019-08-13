@@ -9,18 +9,7 @@ username - 用户
 password - 密码
 <-->
 <configuration>
-    <auth id="SCOTT_10.45.15.201">
-        <dbType>ORACLE</dbType>
-        <host>10.45.15.201</host>
-        <port>1521</port>
-        <sid>orcl</sid>
-        <serverName></serverName>
-        <userName>scott</userName>
-        <passWord>xoiMDvbRNj8hS8f7QkVdwR5VTVnNHiLBXKEPE/pd2DyYxwW0gVL3VYiw6Mr6hv9+hF5TqD5/WGc4wuolwHup9Q==</passWord>
-        <enable>Ture</enable>
-    </auth>
-
-    <auth id="SCOTT_10.45.15.201">
+    <auth id="sourceDB">
         <dbType>ORACLE</dbType>
         <host>10.45.15.201</host>
         <port>1521</port>
@@ -28,6 +17,17 @@ password - 密码
         <serverName></serverName>
         <userName>test_like</userName>
         <passWord>qVc727/7Q+YRCC9rOgKSWgbIlQJ2uI8Cw8jqj4KfCJHmzzEXXlSWxdIHugR/BSKVIIpnvycmw0GCnWRdJjTLiA==</passWord>
+        <enable>Ture</enable>
+    </auth>
+
+    <auth id="targetDB">
+        <dbType>IMPALA_KUDU</dbType>
+        <host>10.45.59.160</host>
+        <port>21050</port>
+        <sid></sid>
+        <serverName>iwc_kudu</serverName>
+        <userName></userName>
+        <passWord></passWord>
         <enable>Ture</enable>
     </auth>
 
@@ -41,16 +41,4 @@ password - 密码
         <passWord>xoiMDvbRNj8hS8f7QkVdwR5VTVnNHiLBXKEPE/pd2DyYxwW0gVL3VYiw6Mr6hv9+hF5TqD5/WGc4wuolwHup9Q==</passWord>
         <enable>Ture</enable>
     </auth>
-
-    <auth id="impala_10.45.59.160">
-        <dbType>IMPALA_KUDU</dbType>
-        <host>10.45.59.160</host>
-        <port>21050</port>
-        <sid></sid>
-        <serverName>iwc_kudu</serverName>
-        <userName></userName>
-        <passWord></passWord>
-        <enable>Ture</enable>
-    </auth>
-
 </configuration>

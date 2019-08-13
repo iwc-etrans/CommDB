@@ -114,9 +114,10 @@ def getConnect(auth):
 
 
 if __name__ == '__main__':
-    dbType, conn = getConnect('impala_10.45.59.160')
+    dbType, conn = getConnect('targetDB')
     cur = conn.cursor()
-    cur.execute("show tables;")
+    #cur.execute("show tables;")
+    cur.execute("select SNO,SNAME,SAGE,SDEPT from STUDENT where SNO in ('1','2','3');")
     result = cur.fetchall()
     print(result)
     cur.close()
