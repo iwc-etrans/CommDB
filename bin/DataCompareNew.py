@@ -17,7 +17,7 @@ target_dbType, target_conn = DBConnect.getConnect("targetDB")
 tableNames = ['SC']
 
 #   数据比较阀值
-dataCount = [20000, 50000, 2000]
+dataCount = [20000, 30000, 2000]
 
 #  获取表对应的字段
 columns_sql = '''select utc.table_name,listagg(utc.column_name,',') within group (order by utc.column_id) as columns 
@@ -95,13 +95,13 @@ for columns_result in columns_results:
                 for i_u_col_result in i_u_col_results:
                     i_u_pk = []
                     for p in pk_position_list:
-                        i_u_pk.extend(i_u_col_result[p])
+                        i_u_pk.append(i_u_col_result[p])
                     i_u_pk_tuple = tuple(i_u_pk)
                     if i_u_pk_tuple in i_pk_results:
-                        source_col_left.extend(i_u_col_result)
-                        source_pk_left.extend(i_u_pk_tuple)
+                        source_col_left.append(i_u_col_result)
+                        source_pk_left.append(i_u_pk_tuple)
                     else:
-                        update_results.extend(i_u_col_result)
+                        update_results.append(i_u_col_result)
             else:
                 source_col_left.extend(source_columns_results)
                 source_pk_left.extend(source_pk_results)
@@ -109,7 +109,23 @@ for columns_result in columns_results:
             while True:
                 target_columns_results = target_columns_cur.fetchmany(dataCount[1])
                 target_pk_results = target_pk_cur.fetchmany(dataCount[1])
+
+                #   反向
+                delete_col_results = list(
+                    set(target_columns_results + target_col_left) - set(source_columns_results))
+                delete_pk_results = list(set(target_pk_results + target_pk_left) - set(source_pk_results))
+                target_col_left = []
+                target_pk_left = []
+                for delete_col_result in delete_col_results:
+                    delete_pk = []
+                    for q in pk_position_list:
+                        delete_pk.append(delete_col_result[q])
+                    if tuple(delete_pk) in delete_pk_results:
+                        target_col_left.append(delete_col_result)
+                target_pk_left = delete_pk_results
+
                 if len(target_pk_results) > 0:
+
                     #   正向
                     insert_update_col_results = list(set(source_col_left) - set(target_columns_results))
                     insert_pk_results = list(set(source_pk_left) - set(target_pk_results))
@@ -122,24 +138,17 @@ for columns_result in columns_results:
                             insert_update_pk.append(insert_update_col_result[p])
                         insert_update_pk_tuple = tuple(insert_update_pk)
                         if insert_update_pk_tuple in insert_pk_results:
-                            source_col_left.extend(insert_update_col_result)
-                            source_pk_left.extend(insert_update_pk_tuple)
+                            source_col_left.append(insert_update_col_result)
+                            source_pk_left.append(insert_update_pk_tuple)
                         else:
-                            update_results.extend(insert_update_col_result)
-
-                    #   反向
-                    delete_col_results = list(set(target_columns_results) - set(source_col_left))
-                    target_pk_left = list(set(target_pk_results) - set(source_pk_left))
-                    for delete_col_result in delete_col_results:
-                        delete_pk = []
-                        for q in pk_position_list:
-                            delete_pk.append(delete_col_result[q])
-                        if tuple(delete_pk) in target_pk_left:
-                            target_col_left.append(delete_col_result)
+                            update_results.append(insert_update_col_result)
 
                     #   源库数据到达阀值
                     if len(source_col_left) < dataCount[2]:
                         break
+                if len(source_pk_results) < dataCount[0]:
+                    break
+            print('%s update result:%s' % ((datetime.datetime.now()).strftime("%Y-%m-%d %H:%M:%S"), update_results))
             if len(source_pk_results) < dataCount[0]:
                 break
 
