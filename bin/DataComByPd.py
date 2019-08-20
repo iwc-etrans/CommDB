@@ -6,6 +6,8 @@ import LogUtil
 import os
 import RunSQL
 import pandas as pd
+from multiprocessing import Pool
+import datetime
 
 name = os.path.basename(__file__)
 log = LogUtil.Logger(name)
@@ -56,11 +58,11 @@ def col_type_change(db_type, col_list):
     return condition_sql
 
 
-def main(source_auth, target_auth, table_name):
-    source_db_type, source_conn = DBConnect.getConnect(source_auth)
-    target_db_type, target_conn = DBConnect.getConnect(target_auth)
-    pk_cols_arr = get_pk_column(source_auth)
-    all_cols_arr = get_all_column(source_auth)
+def compare_data(table_name, regexp):
+    source_db_type, source_conn = DBConnect.getConnect('sourceDB')
+    target_db_type, target_conn = DBConnect.getConnect('targetDB')
+    pk_cols_arr = get_pk_column('sourceDB')
+    all_cols_arr = get_all_column('sourceDB')
     table_name = str.upper(table_name)
     if table_name in pk_cols_arr.keys():
         pk_cols = pk_cols_arr[table_name]
@@ -73,13 +75,14 @@ def main(source_auth, target_auth, table_name):
         log.info("Find table : %s all cols is %s", table_name, all_cols)
         source_condition_sql = col_type_change(source_db_type, pk_cols)
         target_condition_sql = col_type_change(target_db_type, pk_cols)
-        sql_get_source_data = "select %(cols)s from %(table)s order by %(condition)s" % {'cols': all_cols,
-                                                                                         'table': table_name,
-                                                                                         'condition': source_condition_sql}
-        source_cur.execute(sql_get_source_data)
-        sql_get_target_data = "select %(cols)s from %(table)s order by %(condition)s" % {'cols': all_cols,
-                                                                                         'table': table_name,
-                                                                                         'condition': target_condition_sql}
+        regexp_condition = ''
+        if regexp != 0:
+            regexp_condition = "where REGEXP_LIKE(" + pk_cols_list[0] + ",'" + regexp + "')"
+        sql_get_source_data = "select %(cols)s from %(table)s %(reg_condition)s order by %(condition)s" % {
+            'cols': all_cols, 'table': table_name, 'reg_condition': regexp_condition, 'condition': source_condition_sql}
+        sql_get_target_data = "select %(cols)s from %(table)s %(reg_condition)s order by %(condition)s" % {
+            'cols': all_cols, 'table': table_name, 'reg_condition': regexp_condition, 'condition': target_condition_sql}
+
         source_cur.execute(sql_get_source_data)
         target_cur.execute(sql_get_target_data)
 
@@ -98,6 +101,7 @@ def main(source_auth, target_auth, table_name):
                 print(target_left_frame)
                 print("------------------update_data---------")
                 print(update_left_frame)
+                print("-----------" + str(os.getpid()) + " over-----------")
                 break
             else:
                 source_frame = pd.DataFrame(list(source_results), columns=all_cols_list)
@@ -132,5 +136,36 @@ def main(source_auth, target_auth, table_name):
                     break
 
 
+def compare_data_multiple(table_name, flag):
+    if flag == 0:
+        compare_data(table_name, flag)
+    else:
+        thread_num_total = int(flag)
+        log.info('Table:' + str(table_name) + '--------------------------' + datetime.datetime.now().strftime(
+            '%Y-%m-%d %H:%M:%S'))
+        thread_num_current = thread_num_total
+        pool = Pool(processes=thread_num_total)
+        log.info("start!!!!  threadTatol：" + str(thread_num_total))
+
+        step = 10 // thread_num_total
+        regex_count = 0
+
+        while thread_num_current > 0:
+            regex_end = regex_count + step - 1
+            if regex_end >= 9:
+                regex_end = 9
+            regexp = '[' + str(regex_count) + '-' + str(regex_end) + ']$'
+            thread_num_current = thread_num_current - 1
+            regex_count = regex_end
+            log.info(
+                'Process:' + str(thread_num_current) + '--------------------------' + datetime.datetime.now().strftime(
+                    '%Y-%m-%d %H:%M:%S'))
+            pool.apply_async(func=compare_data, args=(table_name, regexp))
+            log.info("start process!!!!  ProcessNum：" + str(os.getpid()))
+        pool.close()
+        pool.join()
+
+
 if __name__ == '__main__':
-    main('sourceDB', 'targetDB', 'sc')
+     compare_data_multiple('sc', 2)
+   # compare_data('sc', '[0 - 5]$')
