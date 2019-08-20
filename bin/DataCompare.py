@@ -15,7 +15,7 @@ target_dbType, target_conn = DBConnect.getConnect("targetDB")
 target_cur = target_conn.cursor()
 
 #  todo 表名先写死 后改成读配置文件
-tableNames = ['SC']
+tableNames = ['STUDENT']
 
 #  获取表对应的字段
 columns_sql = '''select utc.table_name,listagg(utc.column_name,',') within group (order by utc.column_id) as columns 
@@ -100,12 +100,11 @@ for columns_result in columns_results:
             if len(source_list) < 999:
                 break
 
-        #   反向比对结果
-        delete_list = []
         #   反向比对 只查主键
         pk_sql = 'select {columns} from {tableName}'.format(columns=pk, tableName=table_name)
         target_cur.execute(pk_sql)
         while True:
+            delete_list = []
             re_source_list = target_cur.fetchmany(999)
             pk_str_list = [""] * len(pk_position_list)
             for re_source in re_source_list:
@@ -115,15 +114,15 @@ for columns_result in columns_results:
             for n in range(0, len(pk_list)):
                 condition_sql = condition_sql + pk_list[n] + " in ('" + pk_str_list[n][3:] + "')" + " and "
             condition_sql = condition_sql[:-4]
-
             target_sql = "select {columns} from {tableName} where {condition}".format(columns=pk,
                                                                                       tableName=table_name,
                                                                                       condition=condition_sql)
             source_cur.execute(target_sql)
             re_target_list = source_cur.fetchall()
             delete_list = list(set(re_source_list) - set(re_target_list))
+
             print('current time %s delete data:%s' % (
             (datetime.datetime.now()).strftime("%Y-%m-%d %H:%M:%S"), delete_list))
             #   最后一波数据跳出循环
-            if len(source_list) < 999:
+            if len(re_source_list) < 999:
                 break

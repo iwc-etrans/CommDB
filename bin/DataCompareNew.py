@@ -17,7 +17,7 @@ target_dbType, target_conn = DBConnect.getConnect("targetDB")
 tableNames = ['SC']
 
 #   数据比较阀值
-dataCount = [20000, 30000, 2000]
+dataCount = [50000, 60000, 6000]
 
 #  获取表对应的字段
 columns_sql = '''select utc.table_name,listagg(utc.column_name,',') within group (order by utc.column_id) as columns 
@@ -89,42 +89,58 @@ for columns_result in columns_results:
 
             source_columns_results = source_columns_cur.fetchmany(dataCount[0])
             source_pk_results = source_pk_cur.fetchmany(dataCount[0])
-            if len(target_pk_left) > 0:
-                i_u_col_results = list(set(source_columns_results) - set(target_col_left))
-                i_pk_results = list(set(source_pk_results) - set(target_pk_left))
-                for i_u_col_result in i_u_col_results:
-                    i_u_pk = []
-                    for p in pk_position_list:
-                        i_u_pk.append(i_u_col_result[p])
-                    i_u_pk_tuple = tuple(i_u_pk)
-                    if i_u_pk_tuple in i_pk_results:
-                        source_col_left.append(i_u_col_result)
-                        source_pk_left.append(i_u_pk_tuple)
-                    else:
-                        update_results.append(i_u_col_result)
-            else:
-                source_col_left.extend(source_columns_results)
-                source_pk_left.extend(source_pk_results)
+            if len(source_pk_results) > 0:
+                if len(target_pk_left) > 0:
+                    i_u_col_results = list(set(source_columns_results) - set(target_col_left))
+                    i_pk_results = list(set(source_pk_results) - set(target_pk_left))
+                    for i_u_col_result in i_u_col_results:
+                        i_u_pk = []
+                        for p in pk_position_list:
+                            i_u_pk.append(i_u_col_result[p])
+                        i_u_pk_tuple = tuple(i_u_pk)
+                        if i_u_pk_tuple in i_pk_results:
+                            source_col_left.append(i_u_col_result)
+                            source_pk_left.append(i_u_pk_tuple)
+                        else:
+                            update_results.append(i_u_col_result)
+
+                else:
+                    source_col_left.extend(source_columns_results)
+                    source_pk_left.extend(source_pk_results)
+
+                if len(target_pk_left) > dataCount[1]:
+                    d_col_results = list(set(target_col_left) - set(source_columns_results))
+                    d_pk_results = list(set(target_pk_left) - set(source_pk_results))
+                    target_col_left = []
+                    target_pk_left = []
+                    for d_col_result in d_col_results:
+                        d_pk = []
+                        for q in pk_position_list:
+                            d_pk.append(d_col_result[q])
+                        if tuple(d_pk) in d_pk_results:
+                            target_col_left.append(d_col_result)
+                    target_pk_left = d_pk_results
+
+                    continue
 
             while True:
                 target_columns_results = target_columns_cur.fetchmany(dataCount[1])
                 target_pk_results = target_pk_cur.fetchmany(dataCount[1])
-
-                #   反向
-                delete_col_results = list(
-                    set(target_columns_results + target_col_left) - set(source_columns_results))
-                delete_pk_results = list(set(target_pk_results + target_pk_left) - set(source_pk_results))
-                target_col_left = []
-                target_pk_left = []
-                for delete_col_result in delete_col_results:
-                    delete_pk = []
-                    for q in pk_position_list:
-                        delete_pk.append(delete_col_result[q])
-                    if tuple(delete_pk) in delete_pk_results:
-                        target_col_left.append(delete_col_result)
-                target_pk_left = delete_pk_results
-
                 if len(target_pk_results) > 0:
+                    if len(source_pk_results) > 0:
+                        #   反向
+                        delete_col_results = list(
+                            set(target_columns_results + target_col_left) - set(source_columns_results))
+                        delete_pk_results = list(set(target_pk_results + target_pk_left) - set(source_pk_results))
+                        target_col_left = []
+                        target_pk_left = []
+                        for delete_col_result in delete_col_results:
+                            delete_pk = []
+                            for q in pk_position_list:
+                                delete_pk.append(delete_col_result[q])
+                            if tuple(delete_pk) in delete_pk_results:
+                                target_col_left.append(delete_col_result)
+                        target_pk_left = delete_pk_results
 
                     #   正向
                     insert_update_col_results = list(set(source_col_left) - set(target_columns_results))
@@ -145,11 +161,14 @@ for columns_result in columns_results:
 
                     #   源库数据到达阀值
                     if len(source_col_left) < dataCount[2]:
-                        break
-                if len(source_pk_results) < dataCount[0]:
-                    break
+                        if len(source_pk_results) < dataCount[0] and len(target_pk_results) == dataCount[1]:
+                            continue
+                        else:
+                            break
+
             print('%s update result:%s' % ((datetime.datetime.now()).strftime("%Y-%m-%d %H:%M:%S"), update_results))
-            if len(source_pk_results) < dataCount[0]:
+
+            if len(source_pk_results) < dataCount[0] and len(target_pk_results) < dataCount[1]:
                 break
 
         print('Table %s insert result:%s' % (table_name, insert_results))
