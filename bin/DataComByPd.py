@@ -7,7 +7,6 @@ import os
 import RunSQL
 import pandas as pd
 from multiprocessing import Pool
-import datetime
 import VariableUtil
 import sys
 
@@ -60,7 +59,7 @@ def col_type_change(db_type, col_list):
     return condition_sql
 
 
-def compare_data(table_name, regexp):
+def compare_data(table_name, total, current):
     source_db_type, source_conn = DBConnect.getConnect('sourceDB')
     target_db_type, target_conn = DBConnect.getConnect('targetDB')
     pk_cols_arr = get_pk_column('sourceDB')
@@ -77,13 +76,18 @@ def compare_data(table_name, regexp):
         log.info("Find table : %s all cols is %s", table_name, all_cols)
         source_condition_sql = col_type_change(source_db_type, pk_cols)
         target_condition_sql = col_type_change(target_db_type, pk_cols)
-        regexp_condition = ''
-        if regexp != 0:
-            regexp_condition = "where REGEXP_LIKE(" + pk_cols_list[0] + ",'" + regexp + "')"
-        sql_get_source_data = "select %(cols)s from %(table)s %(reg_condition)s order by %(condition)s" % {
-            'cols': all_cols, 'table': table_name, 'reg_condition': regexp_condition, 'condition': source_condition_sql}
-        sql_get_target_data = "select %(cols)s from %(table)s %(reg_condition)s order by %(condition)s" % {
-            'cols': all_cols, 'table': table_name, 'reg_condition': regexp_condition, 'condition': target_condition_sql}
+        source_condition_mod = ''
+        target_condition_mod = ''
+        if total != 0:
+            source_condition_mod = "where mod(" + pk_cols_list[1] + "," + str(total) + ")=" + str(current)
+            target_condition_mod = "where fmod(cast(" + pk_cols_list[1] + " as int)," + str(total) + ")=" + str(current)
+
+        sql_get_source_data = "select %(cols)s from %(table)s %(mod_condition)s order by %(condition)s" % {
+            'cols': all_cols, 'table': table_name, 'mod_condition': source_condition_mod,
+            'condition': source_condition_sql}
+        sql_get_target_data = "select %(cols)s from %(table)s %(mod_condition)s order by %(condition)s" % {
+            'cols': all_cols, 'table': table_name, 'mod_condition': target_condition_mod,
+            'condition': target_condition_sql}
 
         source_cur.execute(sql_get_source_data)
         target_cur.execute(sql_get_target_data)
@@ -139,31 +143,21 @@ def compare_data(table_name, regexp):
 
 
 def compare_data_multiple(table_name, flag):
+    flag = int(flag)
     if flag == 0:
-        compare_data(table_name, flag)
+        compare_data(table_name, 0, 0)
     else:
-        thread_num_total = int(flag)
-        log.info('Table:' + str(table_name) + '--------------------------' + datetime.datetime.now().strftime(
-            '%Y-%m-%d %H:%M:%S'))
-        thread_num_current = thread_num_total
+        thread_num_total = flag
+        thread_num_current = 0
         pool = Pool(processes=thread_num_total)
-        log.info("start!!!!  threadTotal：" + str(thread_num_total))
+        log.info("start to compare " + table_name + " total processes: " + str(thread_num_total))
 
-        step = 100 // thread_num_total
-        regex_count = 0
+        while thread_num_total - thread_num_current > 0:
+            pool.apply_async(func=compare_data, args=(table_name, thread_num_total, thread_num_current))
+            log.info("start to compare " + table_name + " current process pid: " + str(
+                os.getpid()))
+            thread_num_current = thread_num_current + 1
 
-        while thread_num_current > 0:
-            regex_end = regex_count + step - 1
-            if regex_end >= 9:
-                regex_end = 9
-            regexp = '[' + str(regex_count) + '-' + str(regex_end) + ']$'
-            thread_num_current = thread_num_current - 1
-            regex_count = regex_end
-            log.info(
-                'Process:' + str(thread_num_current) + '--------------------------' + datetime.datetime.now().strftime(
-                    '%Y-%m-%d %H:%M:%S'))
-            pool.apply_async(func=compare_data, args=(table_name, regexp))
-            log.info("start process!!!!  ProcessNum：" + str(os.getpid()))
         pool.close()
         pool.join()
 
