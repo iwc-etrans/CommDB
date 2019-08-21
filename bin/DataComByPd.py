@@ -8,6 +8,8 @@ import RunSQL
 import pandas as pd
 from multiprocessing import Pool
 import datetime
+import VariableUtil
+import sys
 
 name = os.path.basename(__file__)
 log = LogUtil.Logger(name)
@@ -145,9 +147,9 @@ def compare_data_multiple(table_name, flag):
             '%Y-%m-%d %H:%M:%S'))
         thread_num_current = thread_num_total
         pool = Pool(processes=thread_num_total)
-        log.info("start!!!!  threadTatol：" + str(thread_num_total))
+        log.info("start!!!!  threadTotal：" + str(thread_num_total))
 
-        step = 10 // thread_num_total
+        step = 100 // thread_num_total
         regex_count = 0
 
         while thread_num_current > 0:
@@ -167,5 +169,7 @@ def compare_data_multiple(table_name, flag):
 
 
 if __name__ == '__main__':
-     compare_data_multiple('sc', 2)
-   # compare_data('sc', '[0 - 5]$')
+    for line in open(VariableUtil.CONF_PATH + os.sep + 'tabname.lst', 'r'):
+        tableName = line.strip('\n')
+        progressNum = sys.argv[1]
+        compare_data_multiple(tableName, progressNum)
